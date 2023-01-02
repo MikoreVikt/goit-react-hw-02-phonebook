@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 
-export const List = styled.ul`
+export const Label = styled.label`
   display: flex;
   flex-direction: column;
-  margin: 0;
-  padding: 0;
+  margin-bottom: 10px;
+  width: 300px;
   row-gap: 5px;
 `;

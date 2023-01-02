@@ -1,17 +1,15 @@
-import React from 'react';
 import PropTypes from 'prop-types';
-import { Btn, Item } from './ContactItem.styled';
+import { Li, P, Btn } from './ContactItem.styled';
 
-export const ContactItem = ({ id, name, number, del }) => {
-  return <Item>
-    <span>{name}: {number}</span>
-    <Btn onClick={() => del(id)}>Delete</Btn>
-  </Item>;
-};
+export const ContactItem = ({ id, name, number, del}) => 
+        <Li>
+            <P>{name}: {number}</P>
+            <Btn onClick={() => del(id)}>Delete</Btn>
+        </Li>
 
 ContactItem.propTypes = {
-  id: PropTypes.string.isRequired,
-  name: PropTypes.string.isRequired,
-  number: PropTypes.string.isRequired,
-  del: PropTypes.func.isRequired,
-};
+    id: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    number: PropTypes.string.isRequired,
+    del: PropTypes.func.isRequired,
+}
